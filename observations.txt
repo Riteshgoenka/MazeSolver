@@ -1,0 +1,13 @@
+Name: Ritesh Goenka
+Roll number: 160050047
+========================================
+
+
+================
+     TASK 3
+================
+
+1. Run your code with grid20.txt maze and p = 0.2 and visualise the path using visualize.py script as mentioned above. Save the visualisation as path.png. Also, run your code with the grid10.txt maze and different values of p, ranging from 0 to 1 (both included) and plot the number of actions required to reach the exit from the given start state as a function of p. Save this plot as plot.png. Write and explain your observations from the two plots in observations.txt.
+Answer:
+The path obtained in path.png is not an optimal path i.e. it takes more steps than the optimal path from start state to end state. This is because at each step, the agent moves in the correct direction with probability = 0.8/(number of valid neighbouring cells) + 0.2, which is less than equal to 0.6 when more than one valid neighbouring cells are available. Also, for other random seed values, one can observe much larger paths for the same grid and p value.
+To obtain plot.png, we run our code with the grid10.txt maze and values of p separated by 0.05 ranging from 0 to 1 (both included). We observe that the number of steps to reach the end state is very high for p = 0 and this number decreases with increase in value of p. For p = 1, we obtain the optimal path from start state to end state. This is because the probability of moving to the correct cell (implied by the optimal action) increases with increase in value of p, thus leading to a path with length more closer to the optimal path length.
